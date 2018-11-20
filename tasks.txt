@@ -1,0 +1,6 @@
+- proper search function
+- headline divs
+- footer style
+- books divs
+- hover animation
+- gallery
