@@ -1,0 +1,17 @@
+- He has explicitly requested that the libraries of Bootstrap and FancyBox must be used (below I leave the links). 
+
+- When doing HOVER on each of the covers, it must be rotated to show the title, the description and a "More Info" button (This effect is just CSS. Google is your friend). This button will take you to a more detailed image ("detalle" in the json) of the cover (not the same image) that should be shown in a popup/modal and NOT in another website (FancyBox).
+
+
+
+- (Optional) Books should be displayed with a little responsive behaviour. No need to fight with media queries, only a little adaptation with Bootstrap or plain flexbox would be enough.
+
+
+
+http://fancyapps.com/fancybox/3/
+
+
+
+https://api.myjson.com/bins/zyv02 (English version)
+
+https://drive.google.com/file/d/0B7MuB9FR6W82MF9rVFI4QTlvVmc/viewsa

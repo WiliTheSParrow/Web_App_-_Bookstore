@@ -2,7 +2,10 @@ var app = new Vue({
     el: '#app',
     data: {
         allbooks: [],
+        filteredBooks: [],
         searchKey: "",
+        hideTable: false,
+        hideNoMatch: true,
     },
     created: function () {
         this.getData("https://api.myjson.com/bins/zyv02");
@@ -11,12 +14,18 @@ var app = new Vue({
         }
     },
     computed: {
-        filteredBooks: function () {
-            return this.allbooks.filter((allbooks) => {
-                return allbooks.title.match(this.searchKey);
-                return allbooks.description.match(this.searchKey);
-                return allbooks.language.match(this.searchKey);
+        filterBooks: function () {
+            this.filteredBooks = this.allbooks.filter((allbooks) => {
+                return allbooks.title.toLowerCase().match(this.searchKey.toLowerCase()) || allbooks.description.toLowerCase().match(this.searchKey.toLowerCase()) || allbooks.language.toLowerCase().match(this.searchKey.toLowerCase());
             });
+            if (this.filteredBooks == "") {
+                this.hideTable = true;
+                this.hideNoMatch = false;
+            } else {
+                this.hideTable = false;
+                this.hideNoMatch = true;
+            }
+            return this.filteredBooks;
         }
     },
     methods: {
@@ -28,7 +37,6 @@ var app = new Vue({
                 .then(json => {
                     data = json;
                     app.allbooks = data.books;
-                    webLogic();
                 })
                 .catch(error => error);
         },
@@ -45,7 +53,3 @@ var app = new Vue({
         },
     }
 });
-
-function webLogic() {
-    
-}

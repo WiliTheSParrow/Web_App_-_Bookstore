@@ -22,7 +22,8 @@ If you have not worked with them, take a look. Of course you can use Flexbox if 
 
 
 
-- The books data are hosted on a remote JSON. You must access without downloading it since the client can modify the content without modifying the structure and the project should work without touching anything on the web page.
+- The books data are hosted on a remote JSON. 
+You must access without downloading it since the client can modify the content without modifying the structure and the project should work without touching anything on the web page.
 
 
 
