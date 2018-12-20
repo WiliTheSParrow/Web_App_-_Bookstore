@@ -5,6 +5,20 @@
     <title>Ubiqum Bookstore - Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBVFvGPoDVGjCnKLHImB4OczTNwZmARKM0",
+            authDomain: "bookstore-42fd8.firebaseapp.com",
+            databaseURL: "https://bookstore-42fd8.firebaseio.com",
+            projectId: "bookstore-42fd8",
+            storageBucket: "bookstore-42fd8.appspot.com",
+            messagingSenderId: "321318198223"
+        };
+        firebase.initializeApp(config);
+
+    </script>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
@@ -18,7 +32,7 @@
                     <img class="logopic" src="logopic.png" alt="logo">
                 </div>
                 <div class="searchbody">
-                    <input type="text" v-model="searchKey" class="searchfield" name="search" placeholder="search...">
+                    <input type="text" v-model="searchKey" class="searchfield" name="search" placeholder="search by author or English title...">
                 </div>
             </div>
         </header>
@@ -58,4 +72,5 @@
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="/script.js"></script>
 </body>
+
 </html>
